@@ -1,0 +1,48 @@
+body {
+    margin: 0; /*body태그에 기본적으로 margin 8px이 기본적으로 있음*/
+    height: 2000px; /*body태그의 높이를 2000px로 늘려줌, 홈페이지 높이 증가*/
+}
+
+section {
+    height: 800px;
+    background: url(https://www.starbucks.co.kr/common/img/main/fav_prod_bg_new.jpg) fixed; /*배경이미지 불러옴, fixed : 이미지 고정*/
+}
+
+.photo {
+    position: absolute; /*absolute : 절대적인의 뜻으로, 왼쪽 상단을 기준으로 내 아이템을 원하는 위치로 변경가능*/
+    top: 100px; /*위쪽부터 100px 떨어진 곳에 위치*/
+    right: 200px; /*오른쪽에서 200px 떨어진 곳에 위치*/
+}
+
+h1 {
+    font-size: 6em;
+    width: 258px;
+    color: white;
+    font-family: sans-serif;
+    position: absolute;
+    top: 80px;
+    left: 400px;
+    animation : slide 2s ease-out; /*ease-out : 애니메이션을 스무스하게 움직이게 한다.*/
+}
+
+@keyframes slide {
+    from {
+        left: -100px;
+        opacity: 0; /*글자 투명도*/
+    }
+    to {
+        left: 400px;
+        opacity: 1;
+    }
+}
+
+@keyframes disappear {
+    from {
+        left: 400px;
+        opacity: 1;
+    }
+    to {
+        left: -100px;
+        opacity: 0;
+    }
+}
